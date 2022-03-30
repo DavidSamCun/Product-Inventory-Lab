@@ -4,5 +4,5 @@ public enum LaptopType {
     ultrabook,
     gaming,
     desktopReplacement,
-    chromebook;
+    chromebook
 }

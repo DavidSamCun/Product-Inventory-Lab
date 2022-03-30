@@ -11,6 +11,18 @@ public class Laptop {
     private int year;
     private float price;
 
+    public Laptop(){};
+
+    public Laptop(String name, String brand, LaptopType type, Processor processor, int qty, int year, float price){
+         this.name = name;
+         this.brand = brand;
+         this.type = type;
+         this.processor = processor;
+         this.qty = qty;
+         this.year = year;
+         this.price = price;
+    }
+
     public void setName(String name) {this.name = name;}
 
     public String getName() {return name;}
