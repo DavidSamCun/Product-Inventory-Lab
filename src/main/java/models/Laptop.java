@@ -13,15 +13,20 @@ public class Laptop {
 
     public Laptop(){};
 
-    public Laptop(String name, String brand, LaptopType type, Processor processor, int qty, int year, float price){
-         this.name = name;
-         this.brand = brand;
-         this.type = type;
-         this.processor = processor;
-         this.qty = qty;
-         this.year = year;
-         this.price = price;
+    public Laptop(int id, String name, String brand, LaptopType type, Processor processor, int qty, int year, float price){
+        this.id = id;
+        this.name = name;
+        this.brand = brand;
+        this.type = type;
+        this.processor = processor;
+        this.qty = qty;
+        this.year = year;
+        this.price = price;
     }
+
+    public void setId(int id) {this.id = id;}
+
+    public int getId(){return id;}
 
     public void setName(String name) {this.name = name;}
 
@@ -50,4 +55,6 @@ public class Laptop {
     public void setYear(int year) {this.year = year;}
 
     public int getYear() {return year;}
+
+
 }
