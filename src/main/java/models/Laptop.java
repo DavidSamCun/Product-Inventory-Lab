@@ -11,7 +11,7 @@ public class Laptop {
     private int year;
     private float price;
 
-    public Laptop(){};
+    public Laptop(){}
 
     public Laptop(int id, String name, String brand, LaptopType type, Processor processor, int qty, int year, float price){
         this.id = id;
