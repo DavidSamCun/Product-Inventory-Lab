@@ -39,4 +39,13 @@ public class LaptopService {
 
         return inventory.toArray(output);
     }
+
+    public Boolean delete(int id) {
+
+        if (findLaptop(id) != null){
+            inventory.remove(findLaptop(id));
+            return true;
+        }
+        return false;
+    }
 }

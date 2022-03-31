@@ -73,13 +73,28 @@ class LaptopServiceTest {
         Laptop newbie2 = laptopservice.Create(name, brand, type,processor,qty,year,price);
         Laptop[] list = {newbie, newbie2};
 
-
-        laptopservice.findAll();
-
         Assert.assertEquals(list, laptopservice.findAll());
-
     }
 
+    @Test
+    public void deleteTest(){
+
+        int id = 1;
+        String name = "ZephyrusG15";
+        String brand = "Asus";
+        LaptopType type = LaptopType.gaming;
+        Processor processor = Processor.AMD;
+        int qty = 50;
+        int year = 2021;
+        float price = 1550;
+
+        LaptopService laptopservice = new LaptopService();
+        Laptop newbie = laptopservice.Create(name, brand, type,processor,qty,year,price);
+        Laptop newbie2 = laptopservice.Create(name, brand, type,processor,qty,year,price);
+
+        Assert.assertEquals(true, laptopservice.delete(id));
+        Assert.assertEquals(null, laptopservice.findLaptop(id));
+    }
 
 
 }
