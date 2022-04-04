@@ -1,8 +1,8 @@
 package services;
 
-import models.Laptop;
-import models.LaptopType;
-import models.Processor;
+import models.Laptop.Laptop;
+import models.Laptop.LaptopType;
+import models.Laptop.Processor;
 
 import java.util.ArrayList;
 import java.util.Iterator;

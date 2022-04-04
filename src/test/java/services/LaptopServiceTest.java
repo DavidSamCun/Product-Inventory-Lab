@@ -1,13 +1,11 @@
 package services;
 
-import models.Laptop;
-import models.LaptopType;
-import models.Processor;
+import models.Laptop.Laptop;
+import models.Laptop.LaptopType;
+import models.Laptop.Processor;
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Test;
 import org.testng.Assert;
-
-import static org.junit.jupiter.api.Assertions.*;
 
 class LaptopServiceTest {
 

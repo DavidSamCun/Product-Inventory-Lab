@@ -1,9 +1,10 @@
 package models;
 
+import models.Laptop.Laptop;
+import models.Laptop.LaptopType;
+import models.Laptop.Processor;
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Test;
-
-import static org.junit.jupiter.api.Assertions.*;
 
 class LaptopTest {
 

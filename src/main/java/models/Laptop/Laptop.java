@@ -1,8 +1,8 @@
-package models;
+package models.Laptop;
 
 public class Laptop {
 
-    private int id;
+    private int id; //Do I really need this?
     private String name;
     private String brand;
     private LaptopType type;
