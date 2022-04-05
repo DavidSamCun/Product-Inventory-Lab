@@ -1,11 +1,12 @@
 package services;
 
-import models.Laptop.Laptop;
-import models.Laptop.LaptopType;
-import models.Laptop.Processor;
+import models.LaptopEnums_beta.LaptopEnums;
+import models.LaptopEnums_beta.LaptopType;
+import models.LaptopEnums_beta.Processor;
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Test;
 import org.testng.Assert;
+import services.LaptopServiceEnums_beta.LaptopServiceEnums;
 
 class LaptopServiceTest {
 
@@ -21,8 +22,8 @@ class LaptopServiceTest {
         int year = 2021;
         float price = 1550;
 
-        LaptopService lappieService = new LaptopService();
-        Laptop lap1 = lappieService.Create(name, brand, type,processor,qty,year,price);
+        LaptopServiceEnums lappieService = new LaptopServiceEnums();
+        LaptopEnums lap1 = lappieService.Create(name, brand, type,processor,qty,year,price);
         //Laptop lap2 = new Laptop(id, name, brand, type,processor,qty,year,price);
 
         Assertions.assertEquals(id, lap1.getId());
@@ -48,9 +49,9 @@ class LaptopServiceTest {
         int year = 2021;
         float price = 1550;
 
-        LaptopService laptopservice = new LaptopService();
-        Laptop newbie = laptopservice.Create(name, brand, type,processor,qty,year,price);
-        Laptop newbie2 = laptopservice.Create(name, brand, type,processor,qty,year,price);
+        LaptopServiceEnums laptopservice = new LaptopServiceEnums();
+        LaptopEnums newbie = laptopservice.Create(name, brand, type,processor,qty,year,price);
+        LaptopEnums newbie2 = laptopservice.Create(name, brand, type,processor,qty,year,price);
 
         Assertions.assertEquals(newbie, laptopservice.findLaptop(id));
     }
@@ -66,10 +67,10 @@ class LaptopServiceTest {
         int year = 2021;
         float price = 1550;
 
-        LaptopService laptopservice = new LaptopService();
-        Laptop newbie = laptopservice.Create(name, brand, type,processor,qty,year,price);
-        Laptop newbie2 = laptopservice.Create(name, brand, type,processor,qty,year,price);
-        Laptop[] list = {newbie, newbie2};
+        LaptopServiceEnums laptopservice = new LaptopServiceEnums();
+        LaptopEnums newbie = laptopservice.Create(name, brand, type,processor,qty,year,price);
+        LaptopEnums newbie2 = laptopservice.Create(name, brand, type,processor,qty,year,price);
+        LaptopEnums[] list = {newbie, newbie2};
 
         Assert.assertEquals(list, laptopservice.findAll());
     }
@@ -86,9 +87,9 @@ class LaptopServiceTest {
         int year = 2021;
         float price = 1550;
 
-        LaptopService laptopservice = new LaptopService();
-        Laptop newbie = laptopservice.Create(name, brand, type,processor,qty,year,price);
-        Laptop newbie2 = laptopservice.Create(name, brand, type,processor,qty,year,price);
+        LaptopServiceEnums laptopservice = new LaptopServiceEnums();
+        LaptopEnums newbie = laptopservice.Create(name, brand, type,processor,qty,year,price);
+        LaptopEnums newbie2 = laptopservice.Create(name, brand, type,processor,qty,year,price);
 
         Assert.assertEquals(true, laptopservice.delete(id));
         Assert.assertEquals(null, laptopservice.findLaptop(id));

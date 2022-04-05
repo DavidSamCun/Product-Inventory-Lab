@@ -1,6 +1,6 @@
-package models.Laptop;
+package models.LaptopEnums_beta;
 
-public class Laptop {
+public class LaptopEnums {
 
     private int id; //Do I really need this?
     private String name;
@@ -11,9 +11,9 @@ public class Laptop {
     private int year;
     private float price;
 
-    public Laptop(){}
+    public LaptopEnums(){}
 
-    public Laptop(int id, String name, String brand, LaptopType type, Processor processor, int qty, int year, float price){
+    public LaptopEnums(int id, String name, String brand, LaptopType type, Processor processor, int qty, int year, float price){
         this.id = id;
         this.name = name;
         this.brand = brand;

@@ -1,15 +1,14 @@
 package io;
 
-import models.Laptop.Laptop;
-import models.Laptop.LaptopType;
-import models.Laptop.Processor;
-import services.LaptopService;
+import models.LaptopEnums_beta.LaptopType;
+import models.LaptopEnums_beta.Processor;
+import services.LaptopServiceEnums_beta.LaptopServiceEnums;
 
 import java.util.Scanner;
 
 public class App {
 
-    private LaptopService laptopService = new LaptopService();
+    private LaptopServiceEnums laptopService = new LaptopServiceEnums();
     private Scanner in = new Scanner(System.in);
     private boolean running = true;
     private boolean selecting = true;
@@ -34,12 +33,16 @@ public class App {
                 commandline = in.nextLine();
                 switch (commandline){
                     case "zephyrusg14": buildAsusG14();
+                        System.out.println("Built ZephyrusG14");
                     break;
                     case "zephyrusg15": buildAsusG15();
+                        System.out.println("Built ZephyrusG15");
                     break;
                     case "macbookpro": buildMacBookPro();
+                        System.out.println("Built MacBookPro");
                     break;
                     case "new": buildnewlaptop();
+                        System.out.println("Built new laptop");
                     break;
                 }
 

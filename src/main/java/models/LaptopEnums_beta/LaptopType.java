@@ -1,4 +1,4 @@
-package models.Laptop;
+package models.LaptopEnums_beta;
 
 public enum LaptopType {
     ultrabook,
