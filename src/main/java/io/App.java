@@ -11,6 +11,9 @@ public class App {
 
     private LaptopService laptopService = new LaptopService();
     private Scanner in = new Scanner(System.in);
+    private boolean running = true;
+    private boolean selecting = true;
+
 
     public static void main(String... args) {
         App application = new App(); // (2)
@@ -19,8 +22,36 @@ public class App {
 
     private void init () {
         Console.printWelcome();
-        System.out.println("Enter Laptop to Build\nChoices are ZephyrusG14, ZephyrusG15, MacBookPro, and newLaptop");
+        String commandline;
 
+        while(running) {
+            System.out.println("Enter a selection");
+            commandline = in.nextLine();
+
+
+            if(commandline.equals("build")) {
+                System.out.println("Enter Laptop to Build\nChoices are zephyrusg14, zephyrusg15, macbookpro, and new");
+                commandline = in.nextLine();
+                switch (commandline){
+                    case "zephyrusg14": buildAsusG14();
+                    break;
+                    case "zephyrusg15": buildAsusG15();
+                    break;
+                    case "macbookpro": buildMacBookPro();
+                    break;
+                    case "new": buildnewlaptop();
+                    break;
+                }
+
+
+                continue;
+            }
+
+            if(commandline.equals("end") || commandline.equals("exit")){
+                running = false;
+            }
+
+        }
     }
 
     public void buildAsusG14(){
@@ -128,4 +159,7 @@ public class App {
         }
     }
 
+    public void updateProduct(){
+
+    }
 }
